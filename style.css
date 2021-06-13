@@ -12,16 +12,14 @@ body{
 
 .button__primary{
     background-image: linear-gradient(
-        to right,
-        #ff512f 0%,
-        #dd2476 51%,
-        #ff512f 100%,
 
+            rgb(255, 73, 1), #f10e6d
     );
     padding:12px;
     border:none;
     border-radius:6px;
     cursor:pointer;
+    color: #fff;
 }
 
 .container{
@@ -43,16 +41,35 @@ body{
 .hero__container{
     width: 100%;
 }
-.hero__image__container{
-   width:100%;
-}
-.hero__image{
-    width:100%;
-}
+
 .hero__text{
     font-size: 30px;
     margin: 20px 0;
     color:#1d3557;
+}
+
+
+.hero__image__container{
+    display: flex;
+    align-items: center;
+    position:relative;
+   width:100%;
+}
+
+.hero__image{
+    position: absolute;
+    width:100%;
+}
+.hero__image__shape{
+    position: absolute;
+    width: 100%;
+    z-index: -6;
+}
+
+.hero__image__pattern{
+    position: absolute;
+    width: 100%;
+    z-index: -3;
 }
 @media (min-width:768px){
     .navbar{
@@ -65,33 +82,33 @@ body{
 }
 
 .button__primary {  
-    padding:12px 20px;
-    font-size: 15px;
+    padding:12px 25px;
+    font-size: 20px;
 }
 .hero__container{
     display:flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap:10px;
+    padding: 50px;
 }
 
 }
 @media (min-width:1020px){
     .container{
-        max-width: 900px;
+        max-width: 1000px;
     }
-
+    .hero__text{
+       font-size: 50px;
+    }
+   
         
 }
 @media (min-width:1400px){
     .container{
         max-width:1250px;
     }
-    
-.hero__text{          /* me*/
-    font-size: 50px;
-}
-
 
 }
+
