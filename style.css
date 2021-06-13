@@ -44,7 +44,7 @@ body{
 
 .hero__text{
     font-size: 30px;
-    padding-bottom: 8px;
+    margin-bottom: 20px 0;
     color:#1d3557;
 }
 
@@ -123,13 +123,33 @@ p{
     margin-inline-end: 0px;
 }
 /* menu Styles*/
+.explore__menu__container{
+    margin-top: 50px;
+}
+.explore__menu__text{
+    font-size: 30px;
+    margin-bottom: 20px 0;
+    color:#1d3557;
+    text-align: center;
+}
 .food__menu__card{
    width:100%;
+   background-color: #fff;
+   border-radius: 8px;
+   margin-bottom: 15px;
 }
 .food__image{
     width:100%;
+    border-radius: 8px 8px 0 0;  /*top-left  top-right bottom-left  bottm-right */
 }
 
+.food__menu__card__description{
+    padding:20px;
+}
+.explore__menu__view__more{
+    display: flex;
+    justify-content: center;
+}
 @media (min-width:768px){
     .navbar{
         justify-content: space-between;
