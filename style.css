@@ -7,7 +7,7 @@
 body{
   font-family:"Merriweather",sans-serif;     /*we are providing alternative font sans serif. if merri weather doesntexist sans serif is used*/
   background-color: #ebf2ff;
-  overflow-x:hidden ;
+  
 }
 
 .button__primary{
@@ -24,8 +24,8 @@ body{
 
 .container{
     width:100%;
-    margin:0 auto;
-    padding:0 12px;
+    margin: 0 auto;
+    overflow-x:hidden;
 }
 .navbar{
     display:flex;
@@ -40,6 +40,7 @@ body{
 }
 .hero__container{
     width: 100%;
+    
 }
 
 .hero__text{
@@ -83,12 +84,7 @@ body{
     height:100%;
     gap:25px;
     padding:10px;
-}/*
-.video__footage__text{
-    font-size: 18px;
-    color:#1d3557;
-    
-}*/
+}
 .video__footage__text {
     margin-top: 1rem;
     color: #1d3557;
@@ -107,7 +103,7 @@ body{
     position: absolute;
     content:"";
     top:0;
-    left: 0%;
+    left:0;
     height: 100%;
     width:100%;
     background-image:linear-gradient( 
@@ -126,6 +122,7 @@ p{
 /* menu Styles*/
 .explore__menu__container{
     margin-top: 50px;
+    width: 100%;
 }
 .explore__menu__text{
     font-size: 30px;
@@ -139,6 +136,7 @@ p{
    background-color: #fff;
    border-radius: 8px;
    margin-bottom: 15px;
+   
 }
 .food__image{
     width:100%;
@@ -154,8 +152,56 @@ p{
 }
 
 
+/* grid or flex*/
 
+.restaurants__description{
+    font-size: 30px;
+    font-weight: 800;
+    margin: 30px 0;
+    color:#1d3557;
+    text-align: center;
+}
+.restaurants__flex__row__one,
+.restaurants__flex__row__two{
+    width:100%;
+    display:flex;
+    gap:4px;
+}
+.restaurants__flex__row__one{
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+.restaurant__1__image,
+.restaurant__2__image,
+.restaurant__3__image,
+.restaurant__4__image{
+    width:100%;
+    height:100%;
+    border-radius: 7px;
+}
+.restaurant__1,
+.restaurant__4{
+  width:100%;
+  height:100px;
+}
+.restaurant__2,
+.restaurant__3{
+    width:120%;
+    height: 150px;
+}
 
+/* form */
+.information__title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top:60px;
+    color:#1d3557;
+    text-align:center;
+}
+.information{
+    position:relative;
+    text-align: center;
+} 
 
 @media (min-width:768px){
     .navbar{
@@ -184,18 +230,22 @@ p{
     flex-direction: row;
     align-items: center;
     gap:50px;
+    
 }
 .video__footage::before{
     position: absolute;
     width:100%;
+
 }
 
 
 .explore__menu__container{
     position:relative;
-}
-.exploe__menu__gradient__bg{
-    position:absolute;
+} 
+
+
+.explore__menu__gradient__bg{
+    position: absolute;
     left:0;
     top:0;
     height:100%;
@@ -206,37 +256,63 @@ p{
     z-index: -3;
 
   /*  to get at an angle*/
-  transform:skewY(-5deg) ;
-}
+  transform:skewY(-5deg);
+} 
 .explore__menu__lists{
     display:flex;
     gap:8px;
     margin-top: 50px;
+    padding:0 10px;
 }
 
 #pizza__card{
     margin-top: -20px;
     margin-bottom: 30px;
 }
+
+.restaurants__description{
+   font-size: 30px;
+   width: 100%;
 }
+
+.restaurants__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.restaurants__flex{
+    width:100%;
+   
+}
+}
+
 @media (min-width:1020px){
     .container{
         max-width: 900px;
     }
+    .hero__container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
     
     .explore__menu__lists{
-        
-        gap:12px;
-        padding:0 20px;
+        display: flex;
+        gap:20px;
+        padding:0 30px;
     }
-    .explore__menu__text{
-        font-size: 50px;
+
+    .restaurants__container{
+        margin-top: 30px;
     }
-        
 }
 @media (min-width:1400px){
     .container{
-        max-width:1250px;
+        max-width:1300px;
+        
     }
     .navbar{
         justify-content: space-between;
@@ -265,11 +341,35 @@ p{
         margin-right: 12em;
     }
     
-.explore__menu__lists{
-    display:flex;
-    gap:20px;
-    margin-top: 50px;
-    padding: 0 20px;
+    
+    .explore__menu__lists{
+        display: flex;
+        gap:20px;
+        padding:0 30px;
+    }
+    .explore__menu__text{
+        font-size: 50px;
+    }
+   
+    
+    .restaurants__description{
+        font-size: 45px;
+    }
+    
+.restaurant__1,
+.restaurant__4{
+  width:100%;
+  height:200px;
+}
+.restaurant__2,
+.restaurant__3{
+    width:120%;
+    height: 250px;
+}
+
+.restaurants__flex__row__one,
+.restaurants__flex__row__two{
+    gap:6px;
 }
 
 }
