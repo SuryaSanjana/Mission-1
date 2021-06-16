@@ -7,7 +7,7 @@
 body{
   font-family:"Merriweather",sans-serif;     /*we are providing alternative font sans serif. if merri weather doesntexist sans serif is used*/
   background-color: #ebf2ff;
-  
+  margin: 10px;
 }
 
 .button__primary{
@@ -20,6 +20,7 @@ body{
     border-radius:6px;
     cursor:pointer;
     color: #fff;
+    font-weight: 500;
 }
 
 .container{
@@ -31,6 +32,8 @@ body{
     display:flex;
     justify-content: space-between;
     align-items:center;
+    padding:0px;
+     
 }
 .navbar__brand{
     width:100px;
@@ -46,7 +49,8 @@ body{
 .hero__text{
     font-size: 30px;
     font-weight: 800;
-    margin-bottom: 20px 0;
+    margin-top: auto;
+    margin-bottom: 20px;
     color:#1d3557;
 }
 
@@ -57,24 +61,29 @@ body{
     
     position:relative;
    width:100%;
+   
+   
 }
 
 .hero__image{
     position: absolute;
     border-radius: 6px;
     width:100%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0.2);
+
 }
 .hero__image__shape{
+    align-items: flex-end;
     position: absolute;
     width: 100%;
     z-index: -1;
 }
 
 .hero__image__pattern{
-    justify-content: flex-end;
+    align-items: flex-start;
     position: absolute;
     width: 100%;
-    z-index: -1;
+    z-index: -3;
 }
 .video__footage__container{
     display: flex;
@@ -147,6 +156,7 @@ p{
     padding:20px;
 }
 .explore__menu__view__more{
+
     display: flex;
     justify-content: center;
 }
@@ -155,11 +165,12 @@ p{
 /* grid or flex*/
 
 .restaurants__description{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 800;
-    margin: 30px 0;
+    margin-top: 40px;
+    margin-bottom: 5px;
     color:#1d3557;
-    text-align: center;
+
 }
 .restaurants__flex__row__one,
 .restaurants__flex__row__two{
@@ -191,17 +202,112 @@ p{
 }
 
 /* form */
+.informationcontainer{
+    padding:20px;
+}
 .information__title{
     font-size: 25px;
-    font-weight: 600;
-    margin-top:60px;
+    font-weight: 800;
+    margin-top:80px;
+    margin-bottom: 10px;
     color:#1d3557;
-    text-align:center;
+    padding-left: 20px;
+    
 }
 .information{
     position:relative;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width:100%;
+    gap:10px;
 } 
+#email{
+    height:35px;
+    width:100%;
+    border-radius: 5px;
+    background-color: mistyrose;
+    font-weight: bold;
+    border:1.5px solid lightpink;
+}
+
+.information__button__primary{
+    background-image: linear-gradient(
+        to right,
+     #ff512f 0%, #dd2476 51%,#ff512f 100%
+    );
+    padding:10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* quote */
+.quote__container{
+    position: relative;
+    display: flex;
+     margin-top: 80px;
+     text-align: center;
+     align-items: center;
+     color: #fff;
+     z-index: 5;
+     height:200px;
+     width:100%;
+     border-radius: 13px;
+     background-image:url("https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80");
+     background-repeat: no-repeat;
+     background-position:center center ;
+    
+}
+.quote_image_overlay{
+    position: absolute;
+    
+    
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    height:200px;
+    width:100%;
+    z-index: -1;
+    border-radius: 13px;
+   box-shadow:0 0 3rem(0, 0, 0.9);
+   background-color: rgba(3, 45, 73, 0.5);
+   
+}
+.quote_image_text{
+    font-weight: 600;
+}
+
+/* footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(
+        to right,
+     #ff512f 0%, #dd2476 51%,#ff512f 100%
+    );
+    color:#fff;
+    margin:70px 0;
+    padding-bottom: 2px;
+    border-radius: 13px 13px 0 0;
+    margin-bottom: 0%;
+   
+
+}
+ul{
+   list-style-type: none;
+   
+   padding-left: 100px;
+   font-size: 15px;
+   
+}
+img{
+  
+}
+
 
 @media (min-width:768px){
     .navbar{
@@ -221,7 +327,7 @@ p{
     display:flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap:10px;
 
 }
@@ -287,6 +393,31 @@ p{
     width:100%;
    
 }
+.information__title{
+    font-size: 30px;
+ padding-left: 150px;
+}
+
+.information{
+    display: flex;
+    padding:0 60px;
+    justify-content: center;
+    text-align: center;
+}
+
+#email{
+    width:50%;
+
+}
+.quote__container{
+    font-size: 28px;
+    height: 300px;
+    width:100%;
+}
+
+.quote_image_overlay{
+    height:300px;
+}
 }
 
 @media (min-width:1020px){
@@ -308,6 +439,43 @@ p{
     .restaurants__container{
         margin-top: 30px;
     }
+
+    .information__title{
+        padding-left:180px;
+    }
+    .information{
+       padding:0 180px;
+        width:100%;
+
+
+    }
+    .information__button__primary{
+      width:50%;
+      height:45px;
+      font-size: 18px;
+    }
+    
+
+    #email{
+        width:100%;
+        height:40px;
+    }
+
+    
+.quote__container{
+    font-size: 28px;
+    margin: 100px 0;
+    background-position:center center ;
+    background-size: cover;
+}
+
+.quote_image_overlay{
+    height:300px;
+
+}
+.quote_image_text{
+    font-weight: 500;
+}
 }
 @media (min-width:1400px){
     .container{
@@ -319,10 +487,10 @@ p{
         padding:0px 30px;
     }
     .hero__container{
-        padding:0 60px;
+        padding:0 80px;
     }
     .hero__text{
-        font-size: 45px;
+        font-size: 50px;
         
     }
     .button__primary{
@@ -350,8 +518,12 @@ p{
     .explore__menu__text{
         font-size: 50px;
     }
-   
     
+    .restaurants__container{
+        margin:30px;
+        justify-content: space-around;
+        
+    }
     .restaurants__description{
         font-size: 45px;
     }
@@ -370,6 +542,47 @@ p{
 .restaurants__flex__row__one,
 .restaurants__flex__row__two{
     gap:6px;
+}
+
+.information__title{
+    padding-left: 300px;
+    font-size: 45px;
+}
+
+.information{
+    padding:0 200px;
+     width:100%;
+
+}
+.information__button__primary{
+    width:25%;
+    height:60px;
+    font-size: 18px;
+  }
+  
+
+  #email{
+      width:50%;
+      height:50px;
+      font-size: 20px;
+  }
+
+
+    
+.quote__container{
+   margin:0 30px;
+    font-size: 35px;
+    margin: 100px 0;
+    height:350px;
+    
+
+
+}
+
+.quote_image_overlay{
+    height:350px;
+  
+  
 }
 
 }
