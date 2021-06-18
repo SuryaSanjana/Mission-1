@@ -595,7 +595,7 @@ footer{
 
 .information__title{
     padding-left: 300px;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .information{
@@ -604,32 +604,32 @@ footer{
 
 }
 .information__button__primary{
-    width:25%;
-    height:60px;
+    width:20%;
+    height:50px;
     font-size: 18px;
   }
   
 
   #email{
       width:50%;
-      height:50px;
+      height:45px;
       font-size: 20px;
   }
 
 
     
 .quote__container{
-   margin:0 30px;
+   margin:0 50px;
     font-size: 35px;
     margin: 100px 0;
-    height:350px;
+    height:325px;
     
 
 
 }
 
 .quote_image_overlay{
-    height:350px;
+    height:325px;
   
   
 }
