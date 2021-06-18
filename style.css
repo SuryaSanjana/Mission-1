@@ -143,12 +143,12 @@ p{
 .explore__menu__text{
     font-size: 30px;
     font-weight: 800;
-    margin-bottom: 20px 0;
+    margin-bottom: 20px;
     color:#1d3557;
     text-align: center;
 }
 .food__menu__card{
-    position-absolute;
+    
    width:100%;
    background-color: #fff;
    border-radius: 8px;
